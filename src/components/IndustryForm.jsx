@@ -7,10 +7,10 @@ export default function IndustryForm() {
 
     useEffect(() => {
         const name = window.location.href.split('?')[1];
-        const studentName = name.split('=')[1]
+        const studentRoll = name.split('=')[1]
 
         axios
-        .get(`http://localhost:9000/teacher/send-details/${studentName}`)
+        .get(`http://localhost:9000/teacher/send-details/${studentRoll}`)
         .then((res) => {
             setContent(res.data.student)
         })
@@ -30,10 +30,10 @@ export default function IndustryForm() {
 
     const handleSubmit = (e) => {
         const name = window.location.href.split('?')[1];
-        const studentName = name.split('=')[1];
+        const studentRoll = name.split('=')[1];
         e.preventDefault();
         axios
-            .post(`http://localhost:9000/teacher/upload-industry-marks/${studentName}`, inputs)
+            .post(`http://localhost:9000/teacher/upload-industry-marks/${studentRoll}`, inputs)
             .then((res) => {
                 alert(res.data.message);
             })

@@ -52,7 +52,7 @@ export default function ViewStudents(){
           <label htmlFor="default-search" className="text-sm font-medium text-gray-100 bg-gray-900 sr-only ">
             Search
           </label>
-          <input type="search" onKeyUp={Search} id="search" className="block p-4 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg focus:ring-blue-500 focus:border-blue-500 " placeholder="Search by Enrollemtent number..."/>
+          <input type="search" onKeyUp={Search} id="search" className="block p-4 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg focus:ring-blue-500 focus:border-blue-500 " placeholder="Search by Roll number..."/>
         </form>
       </div>
       
@@ -61,7 +61,7 @@ export default function ViewStudents(){
           <thead className="md:block md:table-header-group hidden">
             <tr className="border md:border-none block md:table-row -top-full md:top-auto -left-full md:left-auto">
               <th className="bg-gray-900 p-2 text-white font-bold md:border md:border-grey-500 text-left block md:table-cell sm:hidden">
-                Enrollment No.
+                Roll No.
               </th>
               <th className="bg-gray-900 p-2 text-white font-bold md:border md:border-grey-500 text-left block md:table-cell sm:hidden">
                 Full Name
@@ -87,7 +87,7 @@ export default function ViewStudents(){
                 className="bg-gray-300 border border-grey-500 md:border-none block md:table-row">
                     <td className="p-2 md:border md:border-grey-500 text-left block md:table-cell">
                       <span className="inline-block w-1/3 md:hidden font-bold">
-                        Enrollment No
+                        Roll No.
                       </span>
                       {element.enrollment_no}
                     </td>

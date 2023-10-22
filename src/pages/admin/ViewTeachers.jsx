@@ -54,7 +54,7 @@ export default function ViewTeachers(){
           <label htmlFor="default-search" className="text-sm font-medium text-gray-100 bg-gray-900 sr-only ">
             Search
           </label>
-          <input type="search" onKeyUp={Search} id="search" className="block p-4 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg focus:ring-blue-500 focus:border-blue-500 " placeholder="Search by Enrollemtent number..."/>
+          <input type="search" onKeyUp={Search} id="search" className="block p-4 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg focus:ring-blue-500 focus:border-blue-500 " placeholder="Search by Username"/>
         </form>
       </div>
       
