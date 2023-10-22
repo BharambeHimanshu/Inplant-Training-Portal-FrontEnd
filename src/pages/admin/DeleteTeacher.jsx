@@ -11,7 +11,7 @@ export default function DeleteTeacher(){
   useEffect(() => {
     return () => {
       axios
-      .get("http://localhost:9000/admin", {
+      .get("https://portal-k7lh.onrender.com/admin", {
         headers: {
           Authorization: "Bearer " + token
         }
@@ -36,7 +36,7 @@ export default function DeleteTeacher(){
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-    .post("http://localhost:9000/admin/delete-teacher", inputs, {
+    .post("https://portal-k7lh.onrender.com/admin/delete-teacher", inputs, {
       headers: {
         Authorization: "Bearer " + token
       }

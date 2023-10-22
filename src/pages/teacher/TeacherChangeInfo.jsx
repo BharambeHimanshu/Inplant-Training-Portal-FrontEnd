@@ -10,7 +10,7 @@ export default function TeacherChangeInfo(){
     useEffect(() => {
         return () => {
           axios
-          .get("http://localhost:9000/teacher", {
+          .get("https://portal-k7lh.onrender.com/teacher", {
             headers: {
               Authorization: "Bearer " + token
             }
@@ -34,7 +34,7 @@ export default function TeacherChangeInfo(){
     const handleSubmit = (e) => {
         e.preventDefault();
         axios
-            .post(`http://localhost:9000/teacher/update/info`, inputs, {
+            .post(`https://portal-k7lh.onrender.com/teacher/update/info`, inputs, {
                 headers: {
                     Authorization: "Bearer " + token
                 }

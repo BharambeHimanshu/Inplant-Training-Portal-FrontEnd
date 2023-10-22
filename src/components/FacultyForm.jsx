@@ -11,7 +11,7 @@ export default function FacultyForm() {
         const studentName = name.split('=')[1]
 
         axios
-        .get(`http://localhost:9000/teacher/send-details/${studentName}`)
+        .get(`https://portal-k7lh.onrender.com/teacher/send-details/${studentName}`)
         .then((res) => {
             setContent(res.data.student)
         })
@@ -34,7 +34,7 @@ export default function FacultyForm() {
         const studentName = name.split('=')[1];
         e.preventDefault();
         axios
-            .post(`http://localhost:9000/teacher/upload-faculty-marks/${studentName}`, inputs, {
+            .post(`https://portal-k7lh.onrender.com/teacher/upload-faculty-marks/${studentName}`, inputs, {
                 headers: {
                     Authorization: "Bearer " + token
                 }

@@ -10,7 +10,7 @@ export default function StudentUploadDocuments() {
     useEffect(() => {
         return () => {
           axios
-          .get("http://localhost:9000/student", {
+          .get("https://portal-k7lh.onrender.com/student", {
             headers: {
               Authorization: "Bearer " + token
             }
@@ -28,7 +28,7 @@ export default function StudentUploadDocuments() {
         e.preventDefault()
         let formData = new FormData()
         formData.append('file', data)
-      const url = `http://localhost:9000/student/file/upload`
+      const url = `https://portal-k7lh.onrender.com/student/file/upload`
         axios.post(url,formData, {
             headers: {
                 Authorization: "Bearer " + token

@@ -18,7 +18,7 @@ export default function Login() {
 
     if (user == "admin") {
       axios
-        .post("http://localhost:9000/admin/login", inputs)
+        .post("https://portal-k7lh.onrender.com/admin/login", inputs)
         .then((res) => {
           sessionStorage.setItem("token", JSON.stringify(res.data.token));
           sessionStorage.setItem("info", JSON.stringify(res.data.user));
@@ -30,7 +30,7 @@ export default function Login() {
         });
     } else if (user == "teacher") {
       axios
-        .post("http://localhost:9000/teacher/login", inputs)
+        .post("https://portal-k7lh.onrender.com/teacher/login", inputs)
         .then((res) => {
           sessionStorage.setItem("token", JSON.stringify(res.data.token));
           sessionStorage.setItem("info", JSON.stringify(res.data.user));
@@ -42,7 +42,7 @@ export default function Login() {
         });
     } else if (user == "student") {
       axios
-        .post("http://localhost:9000/student/login", inputs)
+        .post("https://portal-k7lh.onrender.com/student/login", inputs)
         .then((res) => {
           sessionStorage.setItem("token", JSON.stringify(res.data.token));
           sessionStorage.setItem("info", JSON.stringify(res.data.user));

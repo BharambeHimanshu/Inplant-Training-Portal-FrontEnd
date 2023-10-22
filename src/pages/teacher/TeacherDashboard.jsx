@@ -10,7 +10,7 @@ export default function TeacherDashboard() {
   useEffect(() => {
     return () => {
       axios
-      .get("http://localhost:9000/teacher", {
+      .get("https://portal-k7lh.onrender.com/teacher", {
         headers: {
           Authorization: "Bearer " + token
         }

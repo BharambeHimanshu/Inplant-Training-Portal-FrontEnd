@@ -10,7 +10,7 @@ export default function AdminChangeInfo(){
     useEffect(() => {
         return () => {
           axios
-          .get("http://localhost:9000/admin", {
+          .get("https://portal-k7lh.onrender.com/admin", {
             headers: {
               Authorization: "Bearer " + token
             }
@@ -34,7 +34,7 @@ export default function AdminChangeInfo(){
     const handleSubmit = (e) => {
         e.preventDefault();
         axios
-            .post(`http://localhost:9000/admin/update/info`, inputs, {
+            .post(`https://portal-k7lh.onrender.com/admin/update/info`, inputs, {
                 headers: {
                     Authorization: "Bearer " + token
                 }

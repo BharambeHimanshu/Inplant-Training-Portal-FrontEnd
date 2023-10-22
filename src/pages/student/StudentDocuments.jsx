@@ -10,7 +10,7 @@ export default function StudentDocuments() {
     
     useEffect(() => {
         axios
-        .get("http://localhost:9000/student/file/map", {
+        .get("https://portal-k7lh.onrender.com/student/file/map", {
             headers: {
                 Authorization: "Bearer " + token
             }
@@ -30,7 +30,7 @@ export default function StudentDocuments() {
       const input = {
         fileId: fileId
       }
-      axios.post("http://localhost:9000/student/file/delete", input, {
+      axios.post("https://portal-k7lh.onrender.com/student/file/delete", input, {
         headers: {
           Authorization: token
         }
