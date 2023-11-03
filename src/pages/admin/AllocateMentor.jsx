@@ -11,7 +11,7 @@ export default function AllocateMentor(){
   const navigate = useNavigate()
   
   useEffect(()=>{
-    axios.get('https://portal-k7lh.onrender.com/admin/unallocated-students', {
+    axios.get('http://localhost:9000/admin/unallocated-students', {
       headers: {
         Authorization: "Bearer " + token
       }
@@ -23,7 +23,7 @@ export default function AllocateMentor(){
       navigate("/login");
     })
     
-    axios.get('https://portal-k7lh.onrender.com/admin/teachers/list', {
+    axios.get('http://localhost:9000/admin/teachers/list', {
       headers: {
         Authorization: "Bearer " + token
       }
@@ -60,7 +60,7 @@ export default function AllocateMentor(){
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-    .post(`https://portal-k7lh.onrender.com/admin/allocate-students/${teacherName}`, students, {
+    .post(`http://localhost:9000/admin/allocate-students/${teacherName}`, students, {
       headers: {
         Authorization: "Bearer " + token
       }

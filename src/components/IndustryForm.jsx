@@ -10,7 +10,7 @@ export default function IndustryForm() {
         const studentRoll = name.split('=')[1]
 
         axios
-        .get(`https://portal-k7lh.onrender.com/teacher/send-details/${studentRoll}`)
+        .get(`http://localhost:9000/teacher/send-details/${studentRoll}`)
         .then((res) => {
             setContent(res.data.student)
         })
@@ -33,7 +33,7 @@ export default function IndustryForm() {
         const studentRoll = name.split('=')[1];
         e.preventDefault();
         axios
-            .post(`https://portal-k7lh.onrender.com/teacher/upload-industry-marks/${studentRoll}`, inputs)
+            .post(`http://localhost:9000/teacher/upload-industry-marks/${studentRoll}`, inputs)
             .then((res) => {
                 alert(res.data.message);
             })

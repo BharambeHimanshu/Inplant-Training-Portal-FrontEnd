@@ -11,7 +11,7 @@ export default function TeacherStudents(){
   const navigate = useNavigate()
   
   useEffect(()=>{
-    axios.get('https://portal-k7lh.onrender.com/teacher/students/list', {
+    axios.get('http://localhost:9000/teacher/students/list', {
       headers: {
         Authorization: "Bearer " + token
       }

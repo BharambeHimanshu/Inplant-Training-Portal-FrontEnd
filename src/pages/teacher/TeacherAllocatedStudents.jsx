@@ -9,7 +9,7 @@ export default function AllocateMentor(){
   const navigate = useNavigate()
   
   useEffect(()=>{
-    axios.get('https://portal-k7lh.onrender.com/teacher/allocated-students', {
+    axios.get('http://localhost:9000/teacher/allocated-students', {
       headers: {
         Authorization: "Bearer " + token
       }
@@ -47,7 +47,7 @@ export default function AllocateMentor(){
       studentRoll: studentRoll
     }
     axios
-    .post("https://portal-k7lh.onrender.com/teacher/send-email", input, {
+    .post("http://localhost:9000/teacher/send-email", input, {
       headers: {
         Authorization: "Bearer " + token
       }
@@ -63,7 +63,7 @@ export default function AllocateMentor(){
 
   const handleBulkMail = (e) => {
     axios
-    .post("https://portal-k7lh.onrender.com/teacher/send-bulk-email", bulkInputs, {
+    .post("http://localhost:9000/teacher/send-bulk-email", bulkInputs, {
       headers: {
         Authorization: "Bearer " + token
       }

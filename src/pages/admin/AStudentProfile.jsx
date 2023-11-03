@@ -13,7 +13,7 @@ export default function AStudentProfile() {
   useEffect(() => {
     return () => {
       axios
-      .get("https://portal-k7lh.onrender.com/admin", {
+      .get("http://localhost:9000/admin", {
         headers: {
           Authorization: "Bearer " + token
         }
@@ -26,7 +26,7 @@ export default function AStudentProfile() {
       })
 
       axios
-      .get(`https://portal-k7lh.onrender.com/admin/student-info/${studentName}`, {
+      .get(`http://localhost:9000/admin/student-info/${studentName}`, {
         headers: {
             Authorization: "Bearer " + token
         }

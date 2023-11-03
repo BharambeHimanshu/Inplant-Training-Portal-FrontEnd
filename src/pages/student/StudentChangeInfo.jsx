@@ -10,7 +10,7 @@ export default function StudentChangeInfo(){
     useEffect(() => {
         return () => {
           axios
-          .get("https://portal-k7lh.onrender.com/student", {
+          .get("http://localhost:9000/student", {
             headers: {
               Authorization: "Bearer " + token
             }
@@ -34,7 +34,7 @@ export default function StudentChangeInfo(){
     const handleSubmit = (e) => {
         e.preventDefault();
         axios
-            .post(`https://portal-k7lh.onrender.com/student/update/info`, inputs, {
+            .post(`http://localhost:9000/student/update/info`, inputs, {
                 headers: {
                     Authorization: "Bearer " + token
                 }

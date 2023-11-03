@@ -11,7 +11,7 @@ export default function AddStudent(){
   useEffect(() => {
     return () => {
       axios
-      .get("https://portal-k7lh.onrender.com/admin", {
+      .get("http://localhost:9000/admin", {
         headers: {
           Authorization: "Bearer " + token
         }
@@ -34,7 +34,7 @@ export default function AddStudent(){
   const handleManSubmit = (e) => {
     e.preventDefault();
     axios
-    .post("https://portal-k7lh.onrender.com/admin/add-student", inputs, {
+    .post("http://localhost:9000/admin/add-student", inputs, {
       headers: {
         Authorization: "Bearer " + token
       }
@@ -54,7 +54,7 @@ export default function AddStudent(){
     {console.log(data)}
     let formData = new FormData();
     formData.append('file', data);
-    const url = `https://portal-k7lh.onrender.com/admin/add-student/excel`
+    const url = `http://localhost:9000/admin/add-student/excel`
     // console.log(url,formData);
     axios.post(url,formData, {
       headers: {

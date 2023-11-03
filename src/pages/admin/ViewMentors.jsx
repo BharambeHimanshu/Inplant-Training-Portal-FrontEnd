@@ -10,7 +10,7 @@ export default function ViewMentors(){
   const navigate = useNavigate()
   
   useEffect(()=>{
-    axios.get('https://portal-k7lh.onrender.com/admin/teachers/list', {
+    axios.get('http://localhost:9000/admin/teachers/list', {
       headers: {
         Authorization: "Bearer " + token
       }
@@ -46,7 +46,7 @@ export default function ViewMentors(){
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-    .get(`https://portal-k7lh.onrender.com/admin/allocated-students/${teacherName}`, {
+    .get(`http://localhost:9000/admin/allocated-students/${teacherName}`, {
       headers: {
         Authorization: "Bearer " + token
       }
